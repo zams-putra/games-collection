@@ -1,0 +1,332 @@
+```css
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --bg: #10131f;
+    --panel: #191e2d;
+    --panel-light: #252c3e;
+    --text: #fff;
+    --p1: #4dabf7;
+    --p2: #ff6b6b;
+    --success: #51cf66;
+    --danger: #ff4757;
+    --yellow: #ffd43b;
+}
+
+body {
+    min-height: 100vh;
+
+    background:
+        radial-gradient(
+            circle at top,
+            #252b42 0%,
+            #10131f 50%,
+            #090b12 100%
+        );
+
+    color: var(--text);
+
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* =========================
+   ARENA
+========================= */
+
+.arena {
+    width: min(100% - 2rem, 900px);
+
+    margin: 2rem auto 0;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 2rem;
+}
+
+.char {
+    width: 180px;
+
+    padding: 1rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 0.7rem;
+
+    background: var(--panel);
+
+    border-radius: 1.5rem;
+}
+
+.char-1 {
+    border: 3px solid var(--p1);
+}
+
+.char-2 {
+    border: 3px solid var(--p2);
+}
+
+.char img {
+    width: 110px;
+    height: 110px;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+    border: 4px solid white;
+}
+
+.char-2 img {
+    transform: scaleX(-1);
+}
+
+.hp {
+    width: 100%;
+
+    padding: 0.45rem;
+
+    text-align: center;
+
+    border-radius: 999px;
+
+    background: var(--panel-light);
+
+    font-size: 1.2rem;
+    font-weight: 900;
+}
+
+.hp-1 {
+    color: var(--p1);
+}
+
+.hp-2 {
+    color: var(--p2);
+}
+
+/* =========================
+   QUIZ
+========================= */
+
+.quiz-area {
+    width: min(100% - 2rem, 700px);
+
+    margin: 2rem auto;
+
+    display: flex;
+    justify-content: center;
+}
+
+.quiz {
+    width: 100%;
+
+    padding: 1rem 2rem;
+
+    text-align: center;
+
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 900;
+
+    color: var(--yellow);
+
+    background: var(--panel);
+
+    border: 3px solid var(--yellow);
+
+    border-radius: 1.5rem;
+}
+
+/* =========================
+   keypad
+========================= */
+
+.keypad-area {
+    width: min(100% - 2rem, 700px);
+
+    margin: 0 auto;
+
+    display: flex;
+    justify-content: space-between;
+
+    gap: 2rem;
+}
+
+.pad {
+    width: 50%;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 0.6rem;
+}
+
+.terminal {
+    width: 100%;
+    height: 3rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #080a10;
+
+    border: 2px solid white;
+    border-radius: 0.7rem;
+
+    font-size: 1.5rem;
+    font-weight: 900;
+}
+
+.keypad {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 0.4rem;
+}
+
+button {
+    min-height: 3.2rem;
+
+    border: none;
+    border-radius: 0.7rem;
+
+    background: var(--panel-light);
+
+    color: white;
+
+    font-size: 1.2rem;
+    font-weight: 900;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.08s ease,
+        background 0.15s ease;
+}
+
+button:hover {
+    background: #343d54;
+}
+
+button:active {
+    transform: scale(0.94);
+}
+
+button[value="submit"] {
+    grid-column: span 2;
+
+    background: var(--success);
+    color: #08200e;
+}
+
+button[value="del"] {
+    background: var(--danger);
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 700px) {
+
+    .arena {
+        width: min(100% - 1rem, 600px);
+
+        margin-top: 1rem;
+
+        gap: 1rem;
+    }
+
+    .char {
+        width: 140px;
+
+        padding: 0.7rem;
+
+        border-radius: 1rem;
+    }
+
+    .char img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .hp {
+        font-size: 1rem;
+    }
+
+    .quiz-area {
+        width: min(100% - 1rem, 600px);
+
+        margin: 1.2rem auto;
+    }
+
+    .quiz {
+        padding: 0.8rem;
+
+        font-size: clamp(1.7rem, 8vw, 2.5rem);
+    }
+
+    .keypad-area {
+        width: min(100% - 1rem, 600px);
+
+        gap: 0.8rem;
+    }
+
+    button {
+        min-height: 3rem;
+
+        font-size: 1rem;
+    }
+}
+
+/* =========================
+   PHONE
+========================= */
+
+@media (max-width: 450px) {
+
+    .arena {
+        gap: 0.5rem;
+    }
+
+    .char {
+        width: 125px;
+    }
+
+    .char img {
+        width: 70px;
+        height: 70px;
+    }
+
+    .quiz {
+        font-size: 1.8rem;
+
+        border-radius: 1rem;
+    }
+
+    .keypad-area {
+        gap: 0.5rem;
+    }
+
+    .terminal {
+        height: 2.5rem;
+
+        font-size: 1.2rem;
+    }
+
+    button {
+        min-height: 2.7rem;
+
+        border-radius: 0.5rem;
+
+        font-size: 1rem;
+    }
+}
+```
