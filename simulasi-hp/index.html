@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="id">
 <head>
@@ -18,63 +19,83 @@
           <span id="statusTime">9:41</span>
           <div class="status-icons" aria-label="Status perangkat">
             <span class="signal"><i></i><i></i><i></i><i></i></span>
-            <svg viewBox="0 0 20 14" aria-hidden="true"><path d="M1 4.5C6-0.2 14-0.2 19 4.5L10 13z" fill="currentColor"/></svg>
+            <svg viewBox="0 0 20 14" aria-hidden="true">
+              <path d="M1 4.5C6-0.2 14-0.2 19 4.5L10 13z" fill="currentColor"/>
+            </svg>
             <span class="battery"><i></i></span>
           </div>
         </div>
 
+        <!-- LOCK SCREEN -->
         <section class="lock-screen" id="lockScreen">
           <div class="lock-top">
             <div class="lock-date" id="lockDate">Selasa, 20 Oktober</div>
             <div class="lock-time" id="lockTime">9:41</div>
             <p class="lock-hint">Geser ke atas untuk membuka</p>
           </div>
+
           <div class="lock-bottom">
             <button class="round-action" id="flashlightBtn" aria-label="Senter">⌁</button>
             <button class="round-action" id="cameraBtn" aria-label="Kamera">◉</button>
           </div>
+
           <div class="swipe-area" id="swipeArea" aria-label="Geser ke atas untuk membuka kunci">
             <div class="swipe-line"></div>
           </div>
         </section>
 
+        <!-- PIN SCREEN -->
         <section class="pin-screen hidden" id="pinScreen">
           <button class="pin-back" id="pinBack" aria-label="Kembali">‹</button>
+
           <div class="pin-content">
             <div class="pin-title">Masukkan Kode Sandi</div>
             <div class="pin-subtitle">Masukkan PIN untuk membuka iPhone</div>
+
             <div class="pin-dots" id="pinDots" aria-label="PIN yang dimasukkan">
-              <span></span><span></span><span></span><span></span><span></span><span></span>
+              <span></span><span></span><span></span>
+              <span></span><span></span><span></span>
             </div>
+
             <div class="pin-error" id="pinError" role="status"></div>
+
             <div class="keypad" id="keypad">
               <button data-key="1"><b>1</b></button>
               <button data-key="2"><b>2</b><small>ABC</small></button>
               <button data-key="3"><b>3</b><small>DEF</small></button>
+
               <button data-key="4"><b>4</b><small>GHI</small></button>
               <button data-key="5"><b>5</b><small>JKL</small></button>
               <button data-key="6"><b>6</b><small>MNO</small></button>
+
               <button data-key="7"><b>7</b><small>PQRS</small></button>
               <button data-key="8"><b>8</b><small>TUV</small></button>
               <button data-key="9"><b>9</b><small>WXYZ</small></button>
+
               <span class="keypad-empty"></span>
               <button data-key="0"><b>0</b></button>
               <button class="delete-key" data-key="delete" aria-label="Hapus angka">⌫</button>
             </div>
           </div>
+
           <div class="pin-footer">
             <button id="emergencyBtn">Darurat</button>
             <button id="cancelPinBtn">Batal</button>
           </div>
         </section>
 
+        <!-- HOME SCREEN -->
         <section class="home-screen hidden" id="homeScreen">
           <div class="home-widgets">
             <div class="widget weather-widget">
               <div class="weather-icon">☀</div>
-              <div><strong>24°</strong><span>Cerah</span></div>
+              <div>
+                <strong>24°</strong>
+                <span>Cerah</span>
+              </div>
               <small>Lokasi Anda</small>
             </div>
+
             <div class="widget calendar-widget">
               <span class="calendar-day" id="calendarDay">SEL</span>
               <strong id="calendarDate">20</strong>
@@ -83,39 +104,121 @@
           </div>
 
           <div class="app-grid">
-            <button class="app-icon" data-app="FaceTime"><span class="app-art facetime">▰</span><small>FaceTime</small></button>
-            <button class="app-icon" data-app="Kalender"><span class="app-art calendar"><b id="appCalendarDay">SEL</b><strong id="appCalendarDate">20</strong></span><small>Kalender</small></button>
-            <button class="app-icon" data-app="Foto"><span class="app-art photos"><i></i><i></i><i></i><i></i><i></i><i></i></span><small>Foto</small></button>
-            <button class="app-icon" data-app="Kamera"><span class="app-art camera">◉</span><small>Kamera</small></button>
-            <button class="app-icon" data-app="Mail"><span class="app-art mail">✉</span><small>Mail</small></button>
-            <button class="app-icon" data-app="Jam"><span class="app-art clock"><i></i></span><small>Jam</small></button>
-            <button class="app-icon" data-app="Pengaturan"><span class="app-art settings">⚙</span><small>Pengaturan</small></button>
-            <button class="app-icon" data-app="Catatan"><span class="app-art notes">▤</span><small>Catatan</small></button>
+            <button class="app-icon" data-app="FaceTime">
+              <span class="app-art facetime">▰</span>
+              <small>FaceTime</small>
+            </button>
+
+            <button class="app-icon" data-app="Kalender">
+              <span class="app-art calendar">
+                <b id="appCalendarDay">SEL</b>
+                <strong id="appCalendarDate">20</strong>
+              </span>
+              <small>Kalender</small>
+            </button>
+
+            <button class="app-icon" data-app="Foto">
+              <span class="app-art photos">
+                <i></i><i></i><i></i><i></i><i></i><i></i>
+              </span>
+              <small>Foto</small>
+            </button>
+
+            <button class="app-icon" data-app="Kamera">
+              <span class="app-art camera">◉</span>
+              <small>Kamera</small>
+            </button>
+
+            <button class="app-icon" data-app="Mail">
+              <span class="app-art mail">✉</span>
+              <small>Mail</small>
+            </button>
+
+            <button class="app-icon" data-app="Jam">
+              <span class="app-art clock"><i></i></span>
+              <small>Jam</small>
+            </button>
+
+            <button class="app-icon" data-app="Pengaturan">
+              <span class="app-art settings">⚙</span>
+              <small>Pengaturan</small>
+            </button>
+
+            <button class="app-icon" data-app="Catatan">
+              <span class="app-art notes">▤</span>
+              <small>Catatan</small>
+            </button>
           </div>
 
           <div class="search-pill"><span>⌕</span> Cari</div>
+
           <div class="dock">
-            <button class="app-icon" data-app="Telepon"><span class="app-art phone-app">☎</span><small>Telepon</small></button>
-            <button class="app-icon" data-app="Safari"><span class="app-art safari">◉</span><small>Safari</small></button>
-            <button class="app-icon" data-app="Pesan"><span class="app-art messages">●</span><small>Pesan</small></button>
-            <button class="app-icon" data-app="Musik"><span class="app-art music">♫</span><small>Musik</small></button>
+            <button class="app-icon" data-app="Telepon">
+              <span class="app-art phone-app">☎</span>
+              <small>Telepon</small>
+            </button>
+
+            <button class="app-icon" data-app="Safari">
+              <span class="app-art safari">◉</span>
+              <small>Safari</small>
+            </button>
+
+            <button class="app-icon" data-app="Pesan">
+              <span class="app-art messages">●</span>
+              <small>Pesan</small>
+            </button>
+
+            <button class="app-icon" data-app="Musik">
+              <span class="app-art music">♫</span>
+              <small>Musik</small>
+            </button>
           </div>
         </section>
 
+        <!-- APP MODAL -->
         <section class="app-modal hidden" id="appModal">
-          <div class="app-modal-top"><button id="closeApp">‹</button><span id="appModalTitle">Aplikasi</span><span></span></div>
+          <div class="app-modal-top">
+            <button id="closeApp" aria-label="Kembali ke home">‹</button>
+            <span id="appModalTitle">Aplikasi</span>
+            <span></span>
+          </div>
+
           <div class="app-modal-body" id="appModalBody"></div>
+
+          <!-- PHOTO VIEWER -->
+          <div class="photo-viewer hidden" id="photoViewer" aria-label="Penampil foto">
+            <div class="viewer-topbar">
+              <button id="viewerBack" aria-label="Kembali ke galeri">‹</button>
+              <span id="viewerCount">1 dari 33</span>
+              <button id="viewerClose" aria-label="Tutup foto">×</button>
+            </div>
+
+            <div class="viewer-image-wrap" id="viewerImageWrap">
+              <img id="viewerImage" src="./img/1.jpeg" alt="Foto galeri">
+            </div>
+
+            <div class="viewer-bottom">
+              <button id="viewerPrev" aria-label="Foto sebelumnya">‹</button>
+              <span id="viewerFilename">1.jpeg</span>
+              <button id="viewerNext" aria-label="Foto berikutnya">›</button>
+            </div>
+          </div>
         </section>
 
         <div class="home-indicator" id="homeIndicator" aria-label="Kembali ke layar kunci"></div>
       </div>
+
       <div class="dynamic-island" aria-hidden="true"></div>
       <div class="side-button side-button-right" aria-hidden="true"></div>
       <div class="side-button side-button-left side-button-top" aria-hidden="true"></div>
       <div class="side-button side-button-left side-button-bottom" aria-hidden="true"></div>
     </section>
 
+    <p class="instruction">
+      Geser layar ke atas untuk membuka · PIN demo: <strong>123456</strong>
+    </p>
   </main>
+
   <script src="./script.js"></script>
 </body>
 </html>

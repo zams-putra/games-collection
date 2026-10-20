@@ -34,6 +34,9 @@ better u play this game on kiosk device or tablet, cause its designed for kids t
 
 ## ipon simulator
 
+### disclaimer
+jujur bro gw gasuka ama img di project ini, soalnya gw pmeme handal yang sering war ama army2 itu bro cuman karna.... ah sudahlah
+
 ### Stack
 - html
 - css
