@@ -29,3 +29,15 @@ better u play this game on kiosk device or tablet, cause its designed for kids t
 
 ### link 
 - https://zams-putra.github.io/games-collection/word-battle/
+
+
+
+## ipon simulator
+
+### Stack
+- html
+- css
+- js
+
+### link 
+- https://zams-putra.github.io/games-collection/simulasi-hp/
