@@ -41,6 +41,3 @@ jujur bro gw gasuka ama img di project ini, soalnya gw pmeme handal yang sering 
 - html
 - css
 - js
-
-### link 
-- https://zams-putra.github.io/games-collection/simulasi-hp/
